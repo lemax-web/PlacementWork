@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dates/Marketplace Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="Mplace.css">
+</head>
+<body>
+    <header>
+        <h1 style="margin-left:-50px">U GOT GAME?</h1>
+    </header>
+    
+    <!--This is the menu navbar-->
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#Deals" class="active">Adds-On</a>
+        <a href="#Games">Games</a>
+        <a href="#contact">Supports</a>
+        <a href="#about">About</a>
+        <a href="#Login" class="split" 
+        onclick="document.getElementById('id2').style.display='block'" style="width:auto;" >Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    
+    
+    <!--This is the modal housing the login page-->
+    
+    <div id="id2" class="modal">
+
+      <!--This is the form taking hold of login page-->
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id2').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container_cancelbtn" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id2').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw" style="color:white">Forgot <a href="#" style="color:white">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal for Login Page
+  var modal = document.getElementById('id2');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+
+
+
+    <!--Sign Up Form Page-->
+    
+    <a href="#" onclick="document.getElementById('id1').style.display='block'" style="width:auto;margin-left:78%;">Don't have an account?</a>
+    
+    <div id="id1" class="modal">
+        <span onclick="document.getElementById('id1').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="last name"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lName" required>
+            
+            <label for="first names"><b>First Names</b></label>
+            <input type="text" placeholder="Enter first Names" name="fName" required>
+            
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Enter Address" name="address" required>
+            
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+      
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+      
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id1').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id1');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+    
+    
+    <div class="main">
+        
+        <!-- Using Grid System to Represent the Deals Page-->
+        <div class="row">
+          <div class="column">
+            <div class="content">
+              <img src="mpimages/service1.jpeg" alt="Deal 1 Image" style="width:100%">
+              <h3>Deals 1 Info Here</h3>
+              <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want
+                ....<a href="#" style="text-decoration:none;">See more</a></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+            <img src="mpimages/service2.jpg" alt="Deal 2 Image" style="width:100%">
+              <h3>Deals 2 Info Here</h3>
+              <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want
+                ....<a href="#" style="text-decoration:none;">See more</a></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+            <img src="mpimages/service3.jpg" alt="Deal 3 Image" style="width:100%">
+              <h3>Deals 3 Info Here</h3>
+              <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want
+                ....<a href="#" style="text-decoration:none;">See more</a></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+            <img src="mpimages/service2.jpg" alt="Deal 4 Image" style="width:100%">
+              <h3>Deals 4 Info Here</h3>
+              <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want
+                ....<a href="#" style="text-decoration:none;">See more</a></p>
+            </div>
+          </div>
+        <!-- End Of the Grid -->
+        </div>
+
+        <!--I started up another container for additional deals page-->
+
+        <div class="content">
+            <img src="mpimages/adds1.jpg" alt="Additional Deal" style="width:100%">
+            <h3>Some Other Deals Here</h3>
+            <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want.</p>
+            <p>Do you want to generate more leads? Do you wish to build your reputation online? 
+                Or perhaps you’d like to land on a job that suits your skills and capabilities. 
+                If you do, our services will never fail to achieve your goals. 
+                So, browse this website and have some inspiration the results you want
+                ....<a href="#" style="text-decoration:none;">See more</a></p>
+          </div>
+          
+          </div>
+
+    
+      <!--Footer Page-->
+      <footer>
+        <div class="container-fluid">
+          <div class="row text-center">
+              
+              <div class="col-12">
+                  <hr class="light-100">
+                  <h4 style="text-align: center;">&copy; ugotgame.tv</h4>
+              </div>
+          </div>
+        </div>
+
+  </footer> 
+</body>
+</html>

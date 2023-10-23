@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dates/Marketplace Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="Mplace.css">
+</head>
+<body>
+    <header>
+        <h1 style="margin-left:-50px">U GOT GAME?</h1>
+    </header>
+
+    <!--This is the menu navbar-->
+    
+    <div class="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#Deals" class="active">Adds-On</a>
+        <a href="#Games">Games</a>
+        <a href="#contact">Supports</a>
+        <a href="#about">About</a>
+        <a href="#Login" class="split" 
+        onclick="document.getElementById('id2').style.display='block'" style="width:auto;" >Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    
+    
+    
+    <!--Login page-->
+    
+    <div id="id2" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id2').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container_cancelbtn" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id2').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw" style="color:white">Forgot <a href="#" style="color:white">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal for Login Page
+  var modal = document.getElementById('id2');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+  <!--File upload page-->
+  
+  <div class="container">
+  <form action="/action_page.php">
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="DealsUpload">Deals Upload</label>
+      </div>
+      <div class="col-75">
+        <input type="file" id="file" name="file" placeholder="Select File..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" style="background-color:blueviolet; color:white" value="Submit">
+    </div>
+  </form>
+</div>
+
+<!--Footer Page-->
+    
+      <footer>
+        <div class="container-fluid">
+          <div class="row text-center">
+              
+              <div class="col-12">
+                  <hr class="light-100">
+                  <h4 style="text-align: center;">&copy; ugotgame.tv</h4>
+              </div>
+          </div>
+        </div>
+
+  </footer> 
+</body>
+</html>
